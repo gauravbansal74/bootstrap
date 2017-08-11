@@ -60,6 +60,7 @@
 
   @include hover-focus {
     text-decoration: none;
+    background-color: $list-group-item-hover-bg;
   }
 
   &.disabled,

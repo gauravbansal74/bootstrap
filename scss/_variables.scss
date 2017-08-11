@@ -50,12 +50,12 @@
 //
 
 $white:  #fff !default;
-$gray-100: #f8f9fa !default;
+$gray-100: #f5f5f5 !default; //Done
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
+$gray-600: #7e7e7e !default; // Done
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
@@ -73,7 +73,7 @@ $grays: (
   900: $gray-900
 ) !default;
 
-$blue:    #007bff !default;
+$blue:    #0088bf !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -156,7 +156,7 @@ $sizes: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:       $white !default;
+$body-bg:       $gray-100 !default;
 $body-color:    $gray-900 !default;
 
 // Links
@@ -165,8 +165,8 @@ $body-color:    $gray-900 !default;
 
 $link-color:            theme-color("primary") !default;
 $link-decoration:       none !default;
-$link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
+$link-hover-color:      darken($black, 15%) !default;
+$link-hover-decoration: none !default;
 
 // Paragraphs
 //
@@ -209,7 +209,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-$grid-gutter-width: 30px !default;
+$grid-gutter-width: 0px !default;
 
 // Components
 //
@@ -221,9 +221,9 @@ $line-height-sm:         1.5 !default;
 $border-width: 1px !default;
 $border-color: $gray-200 !default;
 
-$border-radius:          .25rem !default;
-$border-radius-lg:       .3rem !default;
-$border-radius-sm:       .2rem !default;
+$border-radius:          0rem !default;
+$border-radius-lg:       0rem !default;
+$border-radius-sm:       0rem !default;
 
 $component-active-color: $white !default;
 $component-active-bg:    theme-color("primary") !default;
@@ -239,11 +239,11 @@ $transition-collapse:    height .35s ease !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-monospace:  "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif: 'Roboto', sans-serif !default;
+$font-family-monospace:  'Roboto', regular !default;
 $font-family-base:       $font-family-sans-serif !default;
 
-$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base: 0.875rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 
@@ -258,7 +258,7 @@ $h1-font-size: 2.5rem !default;
 $h2-font-size: 2rem !default;
 $h3-font-size: 1.75rem !default;
 $h4-font-size: 1.5rem !default;
-$h5-font-size: 1.25rem !default;
+$h5-font-size: 1.125rem !default;
 $h6-font-size: 1rem !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
@@ -278,7 +278,7 @@ $display3-weight:     300 !default;
 $display4-weight:     300 !default;
 $display-line-height: $headings-line-height !default;
 
-$lead-font-size:   1.25rem !default;
+$lead-font-size:   1rem !default;
 $lead-font-weight: 300 !default;
 
 $small-font-size: 80% !default;
@@ -332,8 +332,8 @@ $table-inverse-color:           $body-bg !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$input-btn-padding-y:       .5rem !default;
-$input-btn-padding-x:       .75rem !default;
+$input-btn-padding-y:       0.44rem !default; // 
+$input-btn-padding-x:       1.665rem !default; //
 $input-btn-line-height:     1.25 !default;
 
 $input-btn-padding-y-sm:    .25rem !default;
@@ -345,6 +345,7 @@ $input-btn-padding-x-lg:    1rem !default;
 $input-btn-line-height-lg:  1.5 !default;
 
 $btn-font-weight:                $font-weight-normal !default;
+// $btn-font-size:                  0.875rem !default;
 $btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
 $btn-focus-box-shadow:           0 0 0 3px rgba(theme-color("primary"), .25) !default;
 $btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;
@@ -578,7 +579,7 @@ $navbar-dark-disabled-color:        rgba($white,.25) !default;
 $navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-dark-toggler-border-color:  rgba($white,.1) !default;
 
-$navbar-light-color:                rgba($black,.5) !default;
+$navbar-light-color:                rgba($white,.5) !default;
 $navbar-light-hover-color:          rgba($black,.7) !default;
 $navbar-light-active-color:         rgba($black,.9) !default;
 $navbar-light-disabled-color:       rgba($black,.3) !default;
@@ -759,6 +760,7 @@ $list-group-border-radius:       $border-radius !default;
 
 $list-group-item-padding-y:      .75rem !default;
 $list-group-item-padding-x:      1.25rem !default;
+$list-group-item-hover-bg:                 $gray-100 !default;
 
 $list-group-hover-bg:                 $gray-100 !default;
 $list-group-active-color:             $component-active-color !default;
@@ -793,9 +795,9 @@ $figure-caption-color:     $gray-600 !default;
 
 
 // Breadcrumbs
-
-$breadcrumb-padding-y:          .75rem !default;
-$breadcrumb-padding-x:          1rem !default;
+$breadcrumb-font-size:          14px !default;
+$breadcrumb-padding-y:          .3rem !default;
+$breadcrumb-padding-x:          0rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
 $breadcrumb-margin-bottom:      1rem !default;
